@@ -1,6 +1,7 @@
 <div>Hello, <%= title %>.</div>
 
-<% for(var i=0; i < products.length; i++) { %>
-  <p><%= products[i].sys.id %></p>
-  <p><%= products[i].fields.productName %></p>
-<% } %>
+<ul>
+  <% for(var i=0; i < products.length; i++) { %>
+    <li><%= products[i].fields.productName %></li>
+  <% } %>
+</ul>

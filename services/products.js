@@ -15,11 +15,7 @@ function getProducts (query) {
   return client.getEntries(query)
 }
 
-function getProductsInCategory (id) {
-  return getProducts({'fields.categories.sys.id[in]': id})
-}
 module.exports = {
   getProduct,
-  getProducts,
-  getProductsInCategory
+  getProducts
 }
