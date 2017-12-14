@@ -39,3 +39,7 @@ jspm_packages
 # vim stuff
 *.swp
 *.swo
+
+# Environment variables
+.env
+
