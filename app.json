@@ -1,0 +1,6 @@
+{
+  "name": "Apercu",
+  "description": "Expand your mind, 10 things at a time.",
+  "repository": "https://github.com/contentful/contentful_express_tutorial",
+  "keywords": ["node", "express", "contentful"]
+}
