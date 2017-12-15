@@ -6,3 +6,13 @@
 <p><%= course.fields.timeToComplete  %> hours</p>
 <p>$ <%= course.fields.minCost  %> — <%= course.fields.maxCost  %></p>
 <p><%= course.fields.intro  %></p>
+<!-- <% console.log(course.fields.courseMaterials) %> -->
+<ol>
+  <% for(var i=0; i < course.fields.courseMaterials.length; i++) { %>
+    <li>
+      <p><a href="<%= course.fields.courseMaterials[i].fields.link  %>" target="_blank">
+        <%= course.fields.courseMaterials[i].fields.title  %>
+      </a></p>
+    </li>
+  <% } %>
+</ol>

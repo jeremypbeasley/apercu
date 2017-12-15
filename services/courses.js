@@ -5,7 +5,6 @@ function getCourse (slug, query) {
   query = query || {}
   query['content_type'] = 'course'
   query['fields.slug'] = slug
-  console.log(query)
   return client.getEntries(query)
 }
 

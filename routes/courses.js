@@ -16,7 +16,6 @@ router.use(function (req, res, next) {
 router.param('slug', function (req, res, next, slug) {
   courses.getCourse(slug).then(function (course) {
     req.course = course.items[0]
-    console.log(req.course)
     next()
   })
 })
