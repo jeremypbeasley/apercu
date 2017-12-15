@@ -1,14 +1,19 @@
 <h1>Aperçu</h1>
 <p>Expand your mind, 10 things at a time.</p>
+<hr>
 <ul>
   <% for(var i=0; i < courses.length; i++) { %>
     <li>
-      <p><%= courses[i].fields.title  %></p>
+      <p><b>
+        <a href="/courses/<%= courses[i].fields.slug  %>">
+          <%= courses[i].fields.title  %>
+        </a>
+      </b></p>
+      <!-- <% console.log(courses[i]) %> -->
       <p>by <%= courses[i].fields.curator.fields.name  %></p>
-      <p><%= courses[i].fields.timeToComplete  %> hrs.</p>
+      <p><%= courses[i].fields.timeToComplete  %> hours</p>
       <!-- Really flexible image API here https://www.contentful.com/developers/docs/references/images-api/#/reference/resizing-&-cropping -->
-      <img src="http:<%= courses[i].fields.thumbnail.fields.file.url  %>?w=600"/>
-      <!-- <p>$ <%= courses[i].fields.minCost  %> — <%= courses[i].fields.maxCost  %></p> -->
+      <img src="http:<%= courses[i].fields.thumbnail.fields.file.url  %>?w=300"/>
     </li>
   <% } %>
 </ul>
