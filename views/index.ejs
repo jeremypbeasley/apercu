@@ -1,7 +1,11 @@
-<div>Hello, <%= title %>.</div>
-
+<h1>Aperçu</h1>
+<p>Expand your mind, 10 things at a time.</p>
 <ul>
-  <% for(var i=0; i < products.length; i++) { %>
-    <li><%= products[i].fields.title  %></li>
+  <% for(var i=0; i < courses.length; i++) { %>
+    <li>
+      <p><%= courses[i].fields.title  %></p>
+      <p><%= courses[i].fields.timeToComplete  %> hrs.</p>
+      <p>$ <%= courses[i].fields.minCost  %> — <%= courses[i].fields.maxCost  %></p>
+    </li>
   <% } %>
 </ul>

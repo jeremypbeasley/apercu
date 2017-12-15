@@ -1,18 +1,18 @@
 var express = require('express')
 var router = express.Router()
-var products = require('../services/products')
+var courses = require('../services/courses')
 
 router.use(function (req, res, next) {
-  products.getProducts().then(function (productCollection) {
-    req.products = productCollection.items
+  courses.getCourses().then(function (courseCollection) {
+    req.courses = courseCollection.items
     next()
   })
 })
 
 router.get('/', function (req, res, next) {
   res.render('index', {
-    'title': 'Products',
-    'products': req.products
+    'title': 'Courses',
+    'courses': req.courses
   })
 })
 
