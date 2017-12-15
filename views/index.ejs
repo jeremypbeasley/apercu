@@ -4,8 +4,11 @@
   <% for(var i=0; i < courses.length; i++) { %>
     <li>
       <p><%= courses[i].fields.title  %></p>
+      <p>by <%= courses[i].fields.curator.fields.name  %></p>
       <p><%= courses[i].fields.timeToComplete  %> hrs.</p>
-      <p>$ <%= courses[i].fields.minCost  %> — <%= courses[i].fields.maxCost  %></p>
+      <!-- Really flexible image API here https://www.contentful.com/developers/docs/references/images-api/#/reference/resizing-&-cropping -->
+      <img src="http:<%= courses[i].fields.thumbnail.fields.file.url  %>?w=600"/>
+      <!-- <p>$ <%= courses[i].fields.minCost  %> — <%= courses[i].fields.maxCost  %></p> -->
     </li>
   <% } %>
 </ul>
