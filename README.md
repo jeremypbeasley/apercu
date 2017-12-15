@@ -2,7 +2,7 @@ This site is a node app, build on express that consumes content from [contentful
 
 ### Requirements
 
-- [Node.js] [2] 6.2.1 installed 
+- Node.js v6.2.1 installed 
 - Npm 3.10.7 which should be installed with Nodejs
 - [Git][2] installed
 - Basic Command Line Interface knowledge
